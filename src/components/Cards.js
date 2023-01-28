@@ -1,24 +1,24 @@
 import React from "react";
 
-export default function Cards() {
+export default function Cards(props) {
     return (
         <div className="card" >
 
-            <img src = {require("../images/katie-zaferes.png")} className="card--image" />
+            <img src = { require( "../images/" + props.img ) } className="card--image" />
 
 
             <div className="card--stats" >  
 
-                <img src = {require("../images/star.png")} /> 
-                <span> &nbsp;5.0 </span>
-                <span className="gray" > (6) • </span> 
-                <span> &nbsp; USA </span>
+                <img src = { require("../images/star.png") } /> 
+                <span> &nbsp; {props.rating} </span>
+                <span className="gray" > ({props.reviewCount}) • </span> 
+                <span> &nbsp; {props.country} </span>
                   
             </div>
 
             <div className="card--text" >
-                <p className="card--firstline" > Life Lessons with Katie Zaferes </p>
-                <p className="card--secondline" > <strong> From $136 / </strong> person </p>
+                <p className="card--firstline" > {props.title} </p>
+                <p className="card--secondline" > <strong> From ${props.price} / </strong> person </p>
             </div>
 
 
