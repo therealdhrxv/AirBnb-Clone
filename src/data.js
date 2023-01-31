@@ -37,6 +37,19 @@ const data = [
         },
         location: "Norway",
         openSpots: 3,
+    },
+    {
+        id: 4,
+        title: "Water drinking activities",
+        description: "Drinking water is like quenching the soul with a sip of crystal-clear liquid purity.",
+        price: 500,
+        coverImg: "water.png",
+        stats: {
+            rating: 4.0,
+            reviewCount: 24
+        },
+        location: "Vellore",
+        openSpots: 10,
     }
 ]
 

@@ -23,7 +23,7 @@ export default function Card (props) {
                 <img src = { require("../images/star.png") } className = "card--star" alt="" /> 
                 <span> &nbsp; {props.item.stats.rating} </span>
                 <span className="gray" > ({props.item.stats.reviewCount}) • </span> 
-                <span> &nbsp; {props.item.country} </span>
+                <span> &nbsp; {props.item.location} </span>
             </div>
 
             <div className="card--text" >
