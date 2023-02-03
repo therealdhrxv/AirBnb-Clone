@@ -1,30 +1,18 @@
 import React from "react";
-import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import Card from "./components/Card";
-import data from "./data";
+import Home from "./components/Home";
 import './styles/index.css';
+import Favourites from "./components/Favourites";
+import { Routes, Route, } from "react-router-dom"
 
-function App() {
-  
-  const cards = data.map ((item) => {
-    return (
-        < Card
-          key = {item.id}
-          item = {item} 
-        />
-      );
-    });
-    
-    
+
+function App() {  
   return (
-    <div>
-      <Navbar />
-      <Hero />
-      <section className="cards-list" >
-        {cards}
-      </section>
-    </div>
+    <>
+      <Routes>
+        <Route path = "/" element = {< Home />} />
+        <Route path = "fav" element = {< Favourites />} />
+      </Routes>
+    </>
   );
 }
 

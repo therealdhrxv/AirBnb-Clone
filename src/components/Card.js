@@ -1,5 +1,7 @@
 import React from "react";
 
+
+
 export default function Card (props) {
 
     // Logic to dynamically render the badge of either 'SOLD OUT' or 'ONLINE'
@@ -15,11 +17,10 @@ export default function Card (props) {
         <div className="card" >
 
             { badge && <div className="card--badge" > {badge} </div> }   {/* see if 'sold out' badge is rendered on the screen or not */}
-
             <div className="card--like" >
                 <span class="material-symbols-outlined" >
                     favorite
-                </span>
+                </span> 
             </div>
 
             <img src = { require( "../images/" + props.item.coverImg ) } className="card--image" alt="" />
