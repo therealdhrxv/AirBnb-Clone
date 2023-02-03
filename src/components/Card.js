@@ -13,12 +13,22 @@ export default function Card (props) {
     }   
 
 
+
+    // handleClick logic => To render the favourite cards into the 'http://localhost:3000/fav' page
+    function handleClick () {
+        alert('You clicked the like button nigga');
+    }
+
+
+
     return (
         <div className="card" >
 
             { badge && <div className="card--badge" > {badge} </div> }   {/* see if 'sold out' badge is rendered on the screen or not */}
+
+            {/* like button */}
             <div className="card--like" >
-                <span class="material-symbols-outlined" >
+                <span class="material-symbols-outlined" onClick={handleClick} >
                     favorite
                 </span> 
             </div>

@@ -21,7 +21,7 @@ function Home() {
       <section className="cards-list" >
         {cards}
       </section>
-      <Link to = "/fav" className='btn btn-success'>
+      <Link to = "/fav" className='btn btn-info'>
         Click here to see your favourite cards
       </Link>
     </>
