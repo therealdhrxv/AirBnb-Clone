@@ -1,6 +1,7 @@
 const data = [
     {
         id: 1,
+        liked : false,
         title: "Life Lessons with Katie Zaferes",
         description: "I will share with you what I call \"Positively Impactful Moments of Disappointment.\" Throughout my career, many of my highest moments only came after setbacks and losses. But learning from those difficult moments is what gave me the ability to rise above them and reach my goals.",
         price: 136,
@@ -14,6 +15,7 @@ const data = [
     },
     {
         id: 2,
+        liked : false,
         title: "Learn Wedding Photography",
         description: "Interested in becoming a wedding photographer? For beginner and experienced photographers alike, join us in learning techniques required to leave the happy couple with memories that'll last a lifetime.",
         price: 125,
@@ -27,6 +29,7 @@ const data = [
     },
     {
         id: 3,
+        liked : false,
         title: "Group Mountain Biking",
         description: "Experience the beautiful Norwegian landscape and meet new friends all while conquering rugged terrain on your mountain bike. (Bike provided!)",
         price: 50,
@@ -40,6 +43,7 @@ const data = [
     },
     {
         id: 4,
+        liked : false,
         title: "Water drinking activities",
         description: "Drinking water is like quenching the soul with a sip of crystal-clear liquid purity.",
         price: 500,

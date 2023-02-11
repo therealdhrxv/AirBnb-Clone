@@ -12,11 +12,17 @@ export default function Card (props) {
         badge = "ONLINE"
     }   
 
-
+    
 
     // handleClick logic => To render the favourite cards into the 'http://localhost:3000/fav' page
     function handleClick () {
-        alert('You clicked the like button nigga');
+        // alert(`You've clicked on activity number : ${props.item.liked}`);
+        let a = props.item.liked;
+        if (a === true) {
+            props.item.liked = false;
+        } else {
+            props.item.liked = true;
+        }
     }
 
 

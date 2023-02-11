@@ -6,12 +6,9 @@ import Card from "./Card";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const cards = data.map ((item) => {
+  const listOfCards = data.map ((item) => {
     return (
-        < Card
-          key = {item.id}
-          item = {item} 
-        />
+        <Card key = {item.id} item = {item} />
       );
     });
   return (
@@ -19,9 +16,9 @@ function Home() {
       <Navbar />
       <Hero />
       <section className="cards-list" >
-        {cards}
+        {listOfCards}
       </section>
-      <Link to = "/fav" className='btn btn-info'>
+      <Link to = "/fav" className='btn btn-danger'>
         Click here to see your favourite cards
       </Link>
     </>
