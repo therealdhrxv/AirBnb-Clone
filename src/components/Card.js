@@ -16,13 +16,7 @@ export default function Card (props) {
 
     // handleClick logic => To render the favourite cards into the 'http://localhost:3000/fav' page
     function handleClick () {
-        // alert(`You've clicked on activity number : ${props.item.liked}`);
-        let a = props.item.liked;
-        if (a === true) {
-            props.item.liked = false;
-        } else {
-            props.item.liked = true;
-        }
+        alert(`You've clicked on activity number : ${props.item.id}`);
     }
 
 
