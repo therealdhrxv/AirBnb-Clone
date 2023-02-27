@@ -1,31 +1,20 @@
-import React from "react";
+import React, { Component } from "react";
+import FavouriteCards from "./FavouriteCards";
 import { Link } from "react-router-dom";
-import { useState } from "react";
-import Card from "./Card";
-import data from "../data";
+
 
 
 export default function Favourites (props) {
-    // [item, setItem] = useState(0);
-
-    const listOfFavCards = data.map ((item) => {
-            if (props.item.liked === true) {
-                return (
-                        <Card key = {item.id} item = {item} />
-                    );
-            }
-        });   
-    // return statement    
     return (
         <>
             <h1> Here is a list of your favourite cards :  </h1>
-            {/* <Card /> */}
+
+            {/* The component that will render the fav cards */}
+            <FavouriteCards />
+
             <Link to = "/" className="btn btn-warning">
                 Home
             </Link>
-            <section className="cards-list" >
-                {listOfFavCards}
-            </section>
         </>
     );
 }

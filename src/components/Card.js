@@ -15,8 +15,9 @@ export default function Card (props) {
     
 
     // handleClick logic => To render the favourite cards into the 'http://localhost:3000/fav' page
+    let cardId = props.item.id;
     function handleClick () {
-        alert(`You've clicked on activity number : ${props.item.id}`);
+        alert(`You've clicked on activity number : ${cardId}`);
     }
 
 
