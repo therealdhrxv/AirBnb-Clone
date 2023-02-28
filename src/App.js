@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
 import data from "./data";
+import FavouriteCards from "./components/FavouriteCards";
 import './styles/index.css';
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
       <section className="cards-list" >
         {cards}
       </section>
+      <FavouriteCards />
     </div>
   );
 }
