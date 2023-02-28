@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 
 
 
@@ -20,19 +21,28 @@ export default function Card (props) {
         alert(`You've clicked on activity number : ${cardId}`);
     }
 
+    const [fav, setFav] = useState({
+        isFavorite: false
+    })
 
+    function toggleFavorite() {
+        setFav(prevState => {
+            return {
+                isFavorite: !prevState.isFavorite
+            }
+        })
+    }
+
+    let heartIcon = fav.isFavorite ? "liked.png" : "notLiked.png"
 
     return (
         <div className="card" >
 
             { badge && <div className="card--badge" > {badge} </div> }   {/* see if 'sold out' badge is rendered on the screen or not */}
 
-            {/* like button */}
-            <div className="card--like" >
-                <span class="material-symbols-outlined" onClick={handleClick} >
-                    favorite
-                </span> 
-            </div>
+
+            <img src = { require( "../images/" + heartIcon ) } className="card--like" alt="" onClick={toggleFavorite} />
+        
 
             <img src = { require( "../images/" + props.item.coverImg ) } className="card--image" alt="" />
 
