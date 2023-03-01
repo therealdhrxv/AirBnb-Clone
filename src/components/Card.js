@@ -12,19 +12,7 @@ export default function Card (props) {
     }   
 
 
-    const [fav, setFav] = useState({
-        isFavorite: false
-    })
-
-    function toggleFavorite() {
-        setFav(prevState => {
-            return {
-                isFavorite: !prevState.isFavorite
-            }
-        })
-    }
-
-    let heartIcon = fav.isFavorite ? "liked.png" : "notLiked.png"
+    // let heartIcon = fav.isFavorite ? "liked.png" : "notLiked.png"
 
 
 
@@ -33,7 +21,7 @@ export default function Card (props) {
 
             { badge && <div className="card--badge" > {badge} </div> }   {/* see if 'sold out' badge is rendered on the screen or not */}
 
-            <img src = { require( "../images/" + heartIcon ) } className="card--like" alt="" onClick={toggleFavorite} />
+            <img src = { require( "../images/liked.png" ) } className="card--like" alt="" />
 
             <img src = { require( "../images/" + props.item.coverImg ) } className="card--image" alt="" />
 
