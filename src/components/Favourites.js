@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 export default function Favourites (props) {
     return (
         <>
-            <h1> Here is a list of your favourite cards :  </h1>
+            <h1> Hey 👋 there, here is a list of your favourite cards :  </h1>
 
             {/* The component that will render the fav cards */}
             <FavouriteCards />
