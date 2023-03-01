@@ -117,7 +117,10 @@ section {
   top: 6px;
   left: 140px;
   padding: 3px 5px;
+  height: 30px;
+  cursor:pointer;
 }
+
 
 h1 {
   font-size: 50px;
