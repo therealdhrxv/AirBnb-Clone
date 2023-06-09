@@ -3,9 +3,24 @@ import Navbar from "./Navbar";
 import Hero from "./Hero";
 import data from "../data";
 import Card from "./Card";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { Navigate } from "react-router";
+import { useState } from "react";
+
 
 function Home() {
+
+  // Making an array to store all the favourite cards
+  const [favouriteCards, setFavouriteCards] = useState([])
+
+
+  // function to add the favourite cards
+  const addToFavourite = (item) => {
+    setFavouriteCards([...favouriteCards, item])
+    navigate("/fav")
+  }
+
+
 
   // 'listOfCard' will render all the cards
   const listOfCards = data.map ((item) => {
@@ -17,6 +32,9 @@ function Home() {
       );
     });
 
+    const navigate = useNavigate()
+
+
   return (
     <>
       <Navbar />
@@ -25,7 +43,7 @@ function Home() {
       <section className="cards-list" >
         {listOfCards}
       </section>
-      <Link to = "/fav" className='btn text-light bg-dark '>
+      <Link to = "/fav" className='btn text-light bg-danger'>
         Click here to see your favourite cards
       </Link>
     </>

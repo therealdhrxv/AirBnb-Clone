@@ -7,6 +7,7 @@ export default function Card (props) {
 
     // Logic to dynamically render the badge of either 'SOLD OUT' or 'ONLINE'
     let badge
+    
     if (props.item.openSpots === 0) {
         badge = "SOLD OUT"
     } else if (props.item.location === "Online") {
@@ -19,13 +20,24 @@ export default function Card (props) {
         isFavorite: false
     })
 
-    function toggleFavorite() {
+
+    const toggleFavorite = () => {
         setFav(prevState => {
             return {
-                isFavorite: !prevState.isFavorite
+            ...prevState,
+            isFavorite: !prevState.isFavorite
             }
-        })
+        });
+
+        if (!fav.isFavorite) {
+            props.addToFavorites(props.item);
+        } else {
+            props.removeFromFavorites(props.item);
+        }
     }
+
+
+
 
     let heartIcon = fav.isFavorite ? "liked.png" : "notLiked.png"
 
@@ -35,7 +47,7 @@ export default function Card (props) {
             { badge && <div className="card--badge" > {badge} </div> }   {/* see if 'sold out' badge is rendered on the screen or not */}
 
 
-            <img src = { require( "../images/" + heartIcon ) } className="card--like" alt="" onClick={toggleFavorite} />
+            <img src = { require( "../images/" + heartIcon ) } className="card--like" alt="" onClick = {toggleFavorite} />
         
 
             <img src = { require( "../images/" + props.item.coverImg ) } className="card--image" alt="" />
